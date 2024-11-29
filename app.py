@@ -3,10 +3,11 @@ import requests
 '''
 #TaxiFareModel front
 '''
-pickup_longitude=st.number_input('pickup_longitude')
-pickup_latitude=st.number_input('pickup_latitude')
-dropoff_longitude=st.number_input('dropoff_longitude')
-dropoff_latitude=st.number_input('dropoff_latitude')
+pickup_datetime = st.date_input('Pickup Date and time')
+pickup_longitude=st.number_input('Pickup Longitude')
+pickup_latitude=st.number_input('Pickup Latitude')
+dropoff_longitude=st.number_input('Dropoff Longitude')
+dropoff_latitude=st.number_input('Dropoff Latitude')
 passenger_count = st.slider('Select a line count', 1, 6,1)
 
 
@@ -14,6 +15,7 @@ passenger_count = st.slider('Select a line count', 1, 6,1)
 
 url = 'https://taxifare.lewagon.ai/predict'
 dict = {
+    "pickup_datetime": pickup_datetime,
     "pickup_longitude": pickup_longitude,
     "pickup_latitude": pickup_latitude,
     "dropoff_longitude": dropoff_longitude,
