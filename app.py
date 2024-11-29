@@ -25,4 +25,4 @@ dict = {
 
 if st.button('Predict'):
     prediction = requests.get(url, params=dict).json()
-    st.write("Predicted Cost", prediction['prediction'])
+    st.write("Predicted Cost", prediction)
