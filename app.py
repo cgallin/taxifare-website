@@ -3,7 +3,7 @@ import requests
 '''
 #TaxiFareModel front
 '''
-pickup_datetime = st.date_input('Pickup Date and time')
+pickup_datetime = st.text_input('Pickup Date and time')
 pickup_longitude=st.number_input('Pickup Longitude')
 pickup_latitude=st.number_input('Pickup Latitude')
 dropoff_longitude=st.number_input('Dropoff Longitude')
